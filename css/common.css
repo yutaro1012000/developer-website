@@ -1,0 +1,69 @@
+/* 基本スタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#lang-toggle {
+    background-color: #fff;
+    border: none;
+    padding: 10px 15px;
+/*    margin-top: 15px;*/
+/*    margin-bottom: 15px;*/
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#lang-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+/* フッターセクション */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 0.9em;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Privacy Policy</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/privacy.css">
+</head>
+<body>
+    <header>
+        <h1>Website Privacy Policy</h1>
+        <button id="lang-toggle" onclick="setLanguage(document.documentElement.lang === 'ja' ? 'en' : 'ja')">English</button>
+    </header>
+
+    <section id="policy-content">
+        <h2 id="policy-title">Privacy Policy</h2>
+        <p id="policy-intro">This website is committed to transparency regarding the collection, use, and sharing of personal information. By accessing this site, you agree to the following terms.</p>
+        
+        <h3 id="info-collection-title">1. Information Collection</h3>
+        <p id="info-collection-content">We do not use cookies and do not automatically collect personal information. However, we may collect personal information in the following cases:<br>- When you provide your email address for inquiries</p>
+
+        <h3 id="info-use-title">2. Use of Collected Information</h3>
+        <p id="info-use-content">We will use the provided email address to respond to inquiries.</p>
+
+        <h3 id="info-third-party-title">3. Sharing Information with Third Parties</h3>
+        <p id="info-third-party-content">We do not share user information with third parties.</p>
+
+        <h3 id="info-security-title">4. Protection of Information</h3>
+        <p id="info-security-content">Personal information provided will be protected with appropriate security measures.</p>
+
+        <h3 id="user-rights-title">5. User Rights</h3>
+        <p id="user-rights-content">If you wish to delete or modify the information you provided, please contact us via the contact page.</p>
+
+        <h3 id="language-setting-title">6. Language Settings</h3>
+        <p id="language-setting-content">This website automatically displays content in the appropriate language (Japanese or English) based on your browser settings. We do not collect personal information related to these settings.</p>
+
+        <h3 id="policy-update-title">7. Policy Updates</h3>
+        <p id="policy-update-content">This privacy policy may be updated as needed. Changes will be notified on the website.</p>
+    </section>
+
+    <footer>
+        <ul class="footer-menu">
+            <li id="contact" class="footer-item"><a href="mailto:shukaiokure@gmail.com">Contact Us</a></li>
+        </ul>
+        <p>&copy; 2024 Callion. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            if (lang === 'ja') {
+                document.documentElement.lang = 'ja';
+                document.querySelector('header h1').textContent = 'ウェブサイトのプライバシーポリシー';
+                document.getElementById('lang-toggle').textContent = 'English';
+                document.getElementById('policy-title').textContent = 'プライバシーポリシー';
+                document.getElementById('policy-intro').textContent = '本ウェブサイトは、個人情報の収集、使用、共有に関して透明性を持つことをお約束します。当サイトにアクセスすることで、以下の内容に同意したものとみなします。';
+                document.getElementById('info-collection-title').textContent = '1. 収集する情報';
+                document.getElementById('info-collection-content').innerHTML = '当サイトでは、クッキーを使用せず、訪問者の個人情報を自動的に収集することはありません。ただし、以下の状況で個人情報を取得する場合があります。<br>- ユーザーが問い合わせのために提供するメールアドレス';
+                document.getElementById('info-use-title').textContent = '2. 収集した情報の利用目的';
+                document.getElementById('info-use-content').textContent = 'お問い合わせに対応するために、提供されたメールアドレスを使用します。';
+                document.getElementById('info-third-party-title').textContent = '3. 第三者への情報提供';
+                document.getElementById('info-third-party-content').textContent = '当サイトでは、ユーザーの個人情報を第三者と共有することはありません。';
+                document.getElementById('info-security-title').textContent = '4. 情報の保護';
+                document.getElementById('info-security-content').textContent = '提供された個人情報は、適切なセキュリティ対策を講じて保護されます。';
+                document.getElementById('user-rights-title').textContent = '5. ユーザーの権利';
+                document.getElementById('user-rights-content').textContent = 'ユーザーは、提供した情報の削除や修正を希望する場合、お問い合わせページからその旨をお知らせください。';
+                document.getElementById('language-setting-title').textContent = '6. 言語の設定';
+                document.getElementById('language-setting-content').textContent = '当ウェブサイトはユーザーのブラウザの言語設定に基づき、適切な言語（日本語または英語）を自動的に表示します。この設定に関連する個人情報の収集は行いません。';
+                document.getElementById('policy-update-title').textContent = '7. 改定について';
+                document.getElementById('policy-update-content').textContent = '本プライバシーポリシーは、必要に応じて更新されることがあります。変更があった場合は、ウェブサイト上で通知いたします。';
+                document.querySelector('#contact a').textContent = 'お問い合わせ';
+            } else {
+                document.documentElement.lang = 'en';
+                document.querySelector('header h1').textContent = 'Website Privacy Policy';
+                document.getElementById('lang-toggle').textContent = '日本語';
+                document.getElementById('policy-title').textContent = 'Privacy Policy';
+                document.getElementById('policy-intro').textContent = 'This website is committed to transparency regarding the collection, use, and sharing of personal information. By accessing this site, you agree to the following terms.';
+                document.getElementById('info-collection-title').textContent = '1. Information Collection';
+                document.getElementById('info-collection-content').innerHTML = 'We do not use cookies and do not automatically collect personal information. However, we may collect personal information in the following cases:<br>- When you provide your email address for inquiries';
+                document.getElementById('info-use-title').textContent = '2. Use of Collected Information';
+                document.getElementById('info-use-content').textContent = 'We will use the provided email address to respond to inquiries.';
+                document.getElementById('info-third-party-title').textContent = '3. Sharing Information with Third Parties';
+                document.getElementById('info-third-party-content').textContent = 'We do not share user information with third parties.';
+                document.getElementById('info-security-title').textContent = '4. Protection of Information';
+                document.getElementById('info-security-content').textContent = 'Personal information provided will be protected with appropriate security measures.';
+                document.getElementById('user-rights-title').textContent = '5. User Rights';
+                document.getElementById('user-rights-content').textContent = 'If you wish to delete or modify the information you provided, please contact us via the contact page.';
+                document.getElementById('language-setting-title').textContent = '6. Language Settings';
+                document.getElementById('language-setting-content').textContent = 'This website automatically displays content in the appropriate language (Japanese or English) based on your browser settings. We do not collect personal information related to these settings.';
+                document.getElementById('policy-update-title').textContent = '7. Policy Updates';
+                document.getElementById('policy-update-content').textContent = 'This privacy policy may be updated as needed. Changes will be notified on the website.';
+                document.querySelector('#contact a').textContent = 'Contact Us';
+            }
+        }
+
+        // Automatically set language based on navigator.language
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('ja')) {
+                setLanguage('ja');
+            } else {
+                setLanguage('en');
+            }
+        };
+    </script>
+</body>
+</html>

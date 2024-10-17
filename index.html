@@ -1,41 +1,99 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>あなたのＨＰタイトル</title>
-<meta name="keywords" content="ページのキーワードA,B,C">
-<meta name="description" content="ページの説明">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callion - Official Website</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<div id="outer">
-<header><div id="header-container"><div id="head-inner"><h1>あなたのＨＰタイトル</h1>
-<p class="description">あなたのＨＰの説明文</p></div></div>
-</header>
-<div id="content-wrapper">
-<main>
-<div id="inner">
-<h2>記事ページ見出し・大</h2>
-<p>文章あれこれ</p>
-<h3>記事ページ見出し・中</h3>
-<p>文章あれこれ</p>
-<h4>記事ページ見出し・小</h4>
-<p>文章あれこれ</p>
-</div>
-</main>
-<aside>
-<div id="middle-inner">
-<div class="side-title">menu</div>
-<div class="side">
-<ul>
-<li>記事ページへのリンク</li>
-<li>記事ページへのリンク</li>
-</ul>
-</div>
-</div>
-</aside>
-</div>
-<footer>© 2010 あなたのホームページ</footer>
-</div></body>
+    <header>
+        <h1>Callion</h1>
+        <button id="lang-toggle" onclick="setLanguage(document.documentElement.lang === 'ja' ? 'en' : 'ja')">English</button>
+    </header>
+
+    <section id="profile">
+        <h2 id="profile-title">Profile</h2>
+        <p id="profile-description">Delivering simple and intuitive applications.</p>
+    </section>
+
+    <section id="apps">
+        <h2 id="apps-title">Apps</h2>
+        <div class="app-list">
+            <div id="smart-contacts" class="app-item">
+                <h3>Contacts App</h3>
+                <img class="app-icon" src="img/smart_contacts_store.webp" alt="Contacts App Icon">
+                <p>A user-friendly app for managing your contacts with ease.</p>
+                <div class="google-play-badge"><a href='app-link'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a></div>
+            </div>
+            <div id="desktop-calculator" class="app-item">
+                <h3>Calculator App</h3>
+                <img class="app-icon" src="img/desktop_calculator_store.webp" alt="Calculator App Icon">
+                <p>A simple and efficient calculator for everyday use.</p>
+                <div class="google-play-badge"><a href='app-link'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="footer-menu">
+            <li id="privacy-policy" class="footer-item"><a href="privacy/privacy_website.html">Privacy Policy</a></li>
+            <li id="contact" class="footer-item"><a href="mailto:shukaiokure@gmail.com">Contact Us</a></li>
+        </ul>
+        <p>&copy; 2024 Callion. All rights reserved.</p>
+    </footer>
+
+
+
+    <script>
+        function setLanguage(lang) {
+            if (lang === 'ja') {
+                document.documentElement.lang = 'ja';
+                document.getElementById('lang-toggle').textContent = 'English';
+                document.getElementById('profile-title').textContent = 'プロフィール';
+                document.getElementById('profile-description').textContent = '個人でアプリ開発をしています。誰にでも使いやすいアプリを作れるように意識しています。';
+                document.getElementById('apps-title').textContent = 'アプリ';
+
+                document.querySelector('#smart-contacts h3').textContent = 'スマート電話帳';
+                document.querySelector('#smart-contacts p').textContent = '索引付きの電話帳アプリ。連絡先を探すのに余分なスクロールを必要としません。';
+                document.querySelector('#smart-contacts .google-play-badge').innerHTML = `<a href='https://play.google.com/store/apps/details?id=com.roprop.fastcontacs&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png'/></a>`;
+
+                document.querySelector('#desktop-calculator h3').textContent = '実務電卓';
+                document.querySelector('#desktop-calculator p').textContent = '経理、簿記での使用に最適な電卓アプリ。カシオ製の電卓と同じように機能します。';
+                document.querySelector('#desktop-calculator .google-play-badge').innerHTML = `<a href='https://play.google.com/store/apps/details?id=com.roprop.calculator&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png'/></a>`;
+
+                document.querySelector('#privacy-policy a').textContent = 'プライバシーポリシー';
+                document.querySelector('#contact a').textContent = 'お問い合わせ';
+            } else {
+                document.documentElement.lang = 'en';
+                document.getElementById('lang-toggle').textContent = '日本語';
+                document.getElementById('profile-title').textContent = 'Profile';
+                document.getElementById('profile-description').textContent = 'I develop apps independently, focusing on creating user-friendly experiences for everyone.';
+                document.getElementById('apps-title').textContent = 'Apps';
+
+                document.querySelector('#smart-contacts h3').textContent = 'SmartContacts';
+                document.querySelector('#smart-contacts p').textContent = 'Smart Contacts is a contact manager application designed so that you can access contacts quickly.';
+                document.querySelector('#smart-contacts .google-play-badge').innerHTML = `<a href='https://play.google.com/store/apps/details?id=com.roprop.fastcontacs&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>`;
+
+                document.querySelector('#desktop-calculator h3').textContent = 'Desktop Calculator';
+                document.querySelector('#desktop-calculator p').textContent = 'This app is designed to look and operate exactly like a real desktop calculator.This calculator performs the same function as the Casio calculator.';
+                document.querySelector('#desktop-calculator .google-play-badge').innerHTML = `<a href='https://play.google.com/store/apps/details?id=com.roprop.calculator&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>`;
+
+                document.querySelector('#privacy-policy a').textContent = 'Privacy Policy';
+                document.querySelector('#contact a').textContent = 'Contact Us';
+            }
+        }
+
+        // Automatically set language based on navigator.language
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('ja')) {
+                setLanguage('ja');
+            } else {
+                setLanguage('en');
+            }
+        };
+    </script>
+</body>
 </html>
