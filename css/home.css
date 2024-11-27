@@ -1,37 +1,65 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* ヘッダーのスタイル */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
 }
+
+
+#lang-toggle {
+    background-color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#lang-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+/* フッターセクション */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
 /* プロフィールセクション */
 #profile {
     padding: 50px;
     text-align: center;
 }
 
-#profile h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-#profile p {
-    font-size: 1.2em;
-    color: #666;
-}
-
 /* アプリセクション */
 #apps {
     padding: 50px;
-    background-color: #fff;
-}
-
-#apps-title {
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
 }
 
 .app-list {
@@ -56,14 +84,11 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.app-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
 
 .app-icon {
     width: 100px;
     height: 100px;
+    margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 20%;
 }

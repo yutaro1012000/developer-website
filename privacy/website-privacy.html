@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Privacy Policy</title>
-    <link rel="stylesheet" href="../css/common.css">
+    <title>Privacy Policy</title>
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../css/privacy.css">
 </head>
 <body>
-    <header>
-        <h1>Website Privacy Policy</h1>
-        <button id="lang-toggle" onclick="setLanguage(document.documentElement.lang === 'ja' ? 'en' : 'ja')">English</button>
-    </header>
-
     <div id="content">
         <h2 id="policy-title">Privacy Policy</h2>
+        <button id="lang-toggle" onclick="setLanguage(document.documentElement.lang === 'ja' ? 'en' : 'ja')">English</button>
         <p id="policy-intro">This website is committed to transparency regarding the collection, use, and sharing of personal information. By accessing this site, you agree to the following terms.</p>
         
         <h3 id="info-collection-title">1. Information Collection</h3>
@@ -39,18 +36,10 @@
         <p id="policy-update-content">This privacy policy may be updated as needed. Changes will be notified on the website.</p>
     </div>
 
-    <footer>
-        <ul class="footer-menu">
-            <li id="contact" class="footer-item"><a href="mailto:support@callionapps.com">Contact Us</a></li>
-        </ul>
-        <p>&copy; 2024 Callion. All rights reserved.</p>
-    </footer>
-
     <script>
         function setLanguage(lang) {
             if (lang === 'ja') {
                 document.documentElement.lang = 'ja';
-                document.querySelector('header h1').textContent = 'ウェブサイトのプライバシーポリシー';
                 document.getElementById('lang-toggle').textContent = 'English';
                 document.getElementById('policy-title').textContent = 'プライバシーポリシー';
                 document.getElementById('policy-intro').textContent = '本ウェブサイトは、個人情報の収集、使用、共有に関して透明性を持つことをお約束します。当サイトにアクセスすることで、以下の内容に同意したものとみなします。';
@@ -68,10 +57,8 @@
                 document.getElementById('language-setting-content').textContent = '当ウェブサイトはユーザーのブラウザの言語設定に基づき、適切な言語（日本語または英語）を自動的に表示します。この設定に関連する個人情報の収集は行いません。';
                 document.getElementById('policy-update-title').textContent = '7. 改定について';
                 document.getElementById('policy-update-content').textContent = '本プライバシーポリシーは、必要に応じて更新されることがあります。変更があった場合は、ウェブサイト上で通知いたします。';
-                document.querySelector('#contact a').textContent = 'お問い合わせ';
             } else {
                 document.documentElement.lang = 'en';
-                document.querySelector('header h1').textContent = 'Website Privacy Policy';
                 document.getElementById('lang-toggle').textContent = '日本語';
                 document.getElementById('policy-title').textContent = 'Privacy Policy';
                 document.getElementById('policy-intro').textContent = 'This website is committed to transparency regarding the collection, use, and sharing of personal information. By accessing this site, you agree to the following terms.';
@@ -89,7 +76,6 @@
                 document.getElementById('language-setting-content').textContent = 'This website automatically displays content in the appropriate language (Japanese or English) based on your browser settings. We do not collect personal information related to these settings.';
                 document.getElementById('policy-update-title').textContent = '7. Policy Updates';
                 document.getElementById('policy-update-content').textContent = 'This privacy policy may be updated as needed. Changes will be notified on the website.';
-                document.querySelector('#contact a').textContent = 'Contact Us';
             }
         }
 
