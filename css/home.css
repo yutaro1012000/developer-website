@@ -94,5 +94,9 @@ footer {
 }
 
 .google-play-badge img {
-    width: 150px;
+    /*サイズ要件*/
+    /*https://partnermarketinghub.withgoogle.com/brands/google-play/visual-identity/badge-guidelines/#design-guidelines*/
+    --h: max(0.3in, 7.6mm, 0.46in);
+    height: var(--h);
+    margin: calc(var(--h) / 4);
 }
